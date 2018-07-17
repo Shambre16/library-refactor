@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -6,17 +6,268 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="container-fluid">
+      <!-- Header Row -->
+      <div class="row header-row d-flex justify-content-md-around inline-block-center">
+        <div class="col-md-4 header-button-alignment">
+          <!-- Remove Book Modal Trigger -->
+          <button class="btn btn-light btn-md float-left" type="button" name="button" data-toggle="modal" data-target="#remove-book-modal-data">Remove Book</button>
+        </div>
+        <h1 class="col-md-4 text-center">The Library</h1>
+        <div class="col-md-4 header-button-alignment">
+          <!-- Add Book Modal Trigger-->
+          <button class="btn btn-light btn-md float-right align-middle" type="button" name="button" data-toggle="modal" data-target="#add-book-modal-data">Add Book</button>
+        </div>
+      </div>
+      <!-- Jumbotron -->
+      <div class="container-fluid">
+        <div class="row stock-library-image">
+            <h4>The fountain <br> of knowledge <br> begins <br> here...</h1>
+        </div>
+      </div>
+      <!-- Options Row -->
+      <div class="container-fluid inline-block-center">
+        <!-- Left Buttons -->
+        <div class="float-left">
+          <button class="form-control btn-sm" type="button" name="button">Show All Books</button>
+          <!-- Show Random Book Modal Trigger-->
+          <button class="form-control btn-sm" type="button" name="button" data-toggle="modal" data-target="#show-random-book-modal-data">Show Random Book</button>
+        </div>
+        <!-- Search Input and Button -->
+        <div class="float-none">
+          <input class="form-border-rad" type="text" name="" value="">
+          <button class="form-control btn-sm" type="button" name="button">Search</button>
+        </div>
+        <!-- Right Buttons -->
+        <div class="float-right">
+          <!-- Show All Authors  Modal Trigger -->
+          <button class="form-control btn-sm" type="button" name="button" data-toggle="modal" data-target="#show-all-authors-modal-data">Show All Authors</button>
+          <!-- Show Random Author Modal Trigger-->
+          <button class="form-control btn-sm" type="button" name="button" data-toggle="modal" data-target="#show-random-author-modal-data">Show Random Author</button>
+        </div>
+      </div>
+      <!-- Table Row -->
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Cover</th>
+              <th scope="col">Title</th>
+              <th scope="col">Author</th>
+              <th scope="col">Number of Pages</th>
+              <th scope="col">Publish Date</th>
+              <th scope="col">Rating</th>
+              <th scope="col">Edit Book Info</th>
+              <th scope="col">Delete Book</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img class="cover-art-size" src="assets/Mists_of_Avalon-1st_ed.jpg" alt="Mists of Avalon first edition cover art"/></td>
+              <td>The Mists of Avalon</td>
+              <td>Marion Zimmer Bradley</td>
+              <td>876</td>
+              <td>January 16, 1983</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Modal Section -->
+
+      <!-- Remove Book Modal -->
+      <div class="modal fade" id="remove-book-modal-data" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="remove-book">Remove Books</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container-fluid">
+                <h6>Remove Book by Title:</h6>
+                <input class="form-control" type="text" name="" value="">
+                <h6>Remove Book/s by Author:</h6>
+                <input class="form-control" type="text" name="" value="">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+              <button type="button" class="btn btn-primary">Delete Book(s)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Add Book Modal -->
+      <div class="modal fade" id="add-book-modal-data" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="add-book">Add Book(s)</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container-fluid">
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label for="contentEditable">Title *</label>
+                      <!-- Look up contentEditable to see if it belongs here -->
+                      <input type="text" class="form-control" id="" placeholder="">
+                    </div>
+                    <div class="form-group col-md-9">
+                      <label for="">Author *</label>
+                      <input type="text" class="form-control" id="" placeholder="">
+                    </div>
+                  <!-- </div> -->
+                  <div class="form-group col-md-3">
+                    <label for="">Star Rating</label>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="">Pages *</label>
+                      <input class="form-control" id="" type="number" name="" value="">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="">Publication Date *</label>
+                      <input type="date" class="form-control" id="" placeholder="">
+                    </div>
+                    <div class="form-group col-md-12">
+                      <label for="">Synopsis</label>
+                      <textarea class="form-control" id="" rows="3"></textarea>
+                    </div>
+                  </div>
+                  <!-- <button type="submit" class="btn btn-primary">Sign in</button> -->
+                  <div class="form-group custom-file">
+                    <label class="custom-file-label" for="customFile">Book Cover *</label>
+                    <input type="file" class="custom-file-input" id="">
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal">Add Book to Queue</button>
+              <p class="text-center"><span>0</span> book(s) added to queue!</p>
+              <button type="button" class="btn btn-success">Save and Add Book(s)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Show All Books Modal -->
+      <!-- <div class="modal fade" id="remove-book-modal-data" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container-fluid">
+
+</div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- Show Random Book Modal -->
+      <div class="modal fade" id="show-random-book-modal-data" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">We recommend:</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container-fluid">
+
+              </div>
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- Show All Authors Modal -->
+      <div class="modal fade" id="show-all-authors-modal-data" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Our Authors:</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container-fluid">
+
+              </div>
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- Show Random Book Modal -->
+      <div class="modal fade" id="show-random-author-modal-data" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Recommended Author:</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container-fluid">
+
+              </div>
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.bundle.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bookObject.js" charset="utf-8"></script>
     <script src="js/library.js" charset="utf-8"></script>
   </body>
 </html>

@@ -1,0 +1,47 @@
+body {
+  background-color: #F5F5DC;
+}
+
+h1 {
+  font-size: 3.5em;
+  font-weight: bolder;
+  font-family: cursive;
+}
+
+h4 {
+ color: white;
+ font-size: 2.5em;
+ font-weight: normal;
+ font-family: cursive;
+}
+
+.header-button-alignment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stock-library-image {
+  background-image: url('https://get.pxhere.com/photo/book-architecture-interior-building-old-reading-shelf-historic-room-bookshelf-interior-design-manchester-free-inside-cool-image-library-ornate-books-university-shelves-stock-michael-beautiful-d-bookshelves-famous-pretty-hires-pp5182-michaeldbeckwith-beckwith-4k-8k-uhd-pritty-thejohnrylandslibrary-john-rylands-manchesteruniversity-readingroom-estate-i-encolsure-public-library-430440.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.inline-block-center {
+  text-align: center;
+  padding: 2.5em;
+}
+
+.inline-block-center div {
+  display: inline-block;
+  text-align: left;
+}
+
+.form-border-rad {
+  border-radius: .15em;
+}
+
+.cover-art-size {
+  width: 2em;
+}
