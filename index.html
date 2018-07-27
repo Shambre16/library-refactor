@@ -16,12 +16,12 @@
       <div class="row header-row d-flex justify-content-md-around inline-block-center">
         <div class="col-md-4 header-button-alignment">
           <!-- Remove Book Modal Trigger -->
-          <button class="btn btn-light btn-md float-left" type="button" name="button" data-toggle="modal" data-target="#remove-book-modal-data">Remove Book</button>
+          <button class="btn btn-light btn-md float-left" type="button" name="button" data-toggle="modal" data-target="#removeBookModalData">Remove Book</button>
         </div>
         <h1 class="col-md-4 text-center">The Library</h1>
         <div class="col-md-4 header-button-alignment">
           <!-- Add Book Modal Trigger-->
-          <button class="btn btn-light btn-md float-right align-middle" type="button" name="button" data-toggle="modal" data-target="#add-book-modal-data">Add Book</button>
+          <button class="btn btn-light btn-md float-right align-middle" type="button" name="button" data-toggle="modal" data-target="#addBookModalData">Add Book</button>
         </div>
       </div>
       <!-- Jumbotron -->
@@ -36,7 +36,7 @@
         <div class="float-left">
           <button class="form-control btn-sm" type="button" name="button">Show All Books</button>
           <!-- Show Random Book Modal Trigger-->
-          <button class="form-control btn-sm" type="button" name="button" data-toggle="modal" data-target="#show-random-book-modal-data">Show Random Book</button>
+          <button class="form-control btn-sm" type="button" name="button" data-toggle="modal" data-target="#showRandomBookModalData">Show Random Book</button>
         </div>
         <!-- Search Input and Button -->
         <div class="float-none">
@@ -46,9 +46,9 @@
         <!-- Right Buttons -->
         <div class="float-right">
           <!-- Show All Authors  Modal Trigger -->
-          <button class="form-control btn-sm" type="button" name="button" data-toggle="modal" data-target="#show-all-authors-modal-data">Show All Authors</button>
+          <button class="form-control btn-sm" type="button" name="button" data-toggle="modal" data-target="#showAllAuthorsModalData">Show All Authors</button>
           <!-- Show Random Author Modal Trigger-->
-          <button class="form-control btn-sm" type="button" name="button" data-toggle="modal" data-target="#show-random-author-modal-data">Show Random Author</button>
+          <button class="form-control btn-sm" type="button" name="button" data-toggle="modal" data-target="#showRandomAuthorModalData">Show Random Author</button>
         </div>
       </div>
       <!-- Table Row -->
@@ -83,11 +83,11 @@
       <!-- Modal Section -->
 
       <!-- Remove Book Modal -->
-      <div class="modal fade" id="remove-book-modal-data" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="removeBookModalData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="remove-book">Remove Books</h5>
+              <h5 class="modal-title" id="removeBook">Remove Books</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -108,11 +108,11 @@
         </div>
       </div>
       <!-- Add Book Modal -->
-      <div class="modal fade" id="add-book-modal-data" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="addBookModalData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="add-book">Add Book(s)</h5>
+              <h5 class="modal-title" id="addBook">Add Book(s)</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -173,7 +173,7 @@
         </div>
       </div>
       <!-- Show All Books Modal -->
-      <!-- <div class="modal fade" id="remove-book-modal-data" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <!-- <div class="modal fade" id="removeBookModalData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -195,7 +195,7 @@
         </div>
       </div> -->
       <!-- Show Random Book Modal -->
-      <div class="modal fade" id="show-random-book-modal-data" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="showRandomBookModalData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -217,7 +217,7 @@
         </div>
       </div>
       <!-- Show All Authors Modal -->
-      <div class="modal fade" id="show-all-authors-modal-data" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="showAllAuthorsModalData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -239,7 +239,7 @@
         </div>
       </div>
       <!-- Show Random Book Modal -->
-      <div class="modal fade" id="show-random-author-modal-data" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="showRandomAuthorModalData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -269,5 +269,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/bookObject.js" charset="utf-8"></script>
     <script src="js/library.js" charset="utf-8"></script>
+    <script src="js/bookData.js" charset="utf-8"></script>
+    <script src="js/util.js" charset="utf-8"></script>
   </body>
 </html>
