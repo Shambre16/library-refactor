@@ -1,4 +1,2 @@
-var bookshelf = new Array();
-
-
+var bookshelf = [];
 //Format date from new datatime

@@ -1,26 +1,31 @@
-var AddBooksUI = function(container){
-  Library.call(this);
-  this._tempBookShelf = new Array();
-  this.$container = container;
-};
+// var AddBooksUI = function(container){
+class AddBooksUI extends Library {
+  constructor(container) {
+    super();
+    this._tempBookshelf = new Array();
+    this.$container = container;
+  }
+  // Library.call(this);
+  // this._tempBookShelf = new Array();
+  // this.$container = container;
+  // };
 
-AddBooksUI.prototype = Object.create(Library.prototype);
+  // AddBooksUI.prototype = Object.create(Library.prototype);
 
-AddBooksUI.prototype.init = function() {
-  this._bindEvents();
-};
+  init() {
+    this._bindEvents();
+  };
 
-AddBooksUI.prototype._bindEvents = function () {
-  $('#add-books-btn').on('click', $.proxy(this._handleModalOpen, this));
-};
+  _bindEvents() {
+    $('#add-books-btn').on('click', $.proxy(this._handleModalOpen, this));
+  };
 
-AddBooksUI.prototype._handleModalOpen = function () {
-  this.$container.modal('show');
-};
+  _handleModalOpen() {
+    this.$container.modal('show');
+  };
+}
 
-$(function(){
-  window.gAddBooksUI = new AddBooksUI($('#addBookModal'));
+$(function() {
+  window.gAddBooksUI = new AddBooksUI($('#addBookModalData'));
   window.gAddBooksUI.init();
 });
-
-// Second iteration AddBooksUI with 
