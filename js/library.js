@@ -6,24 +6,24 @@ class Library {
 
   addBook(book) {
     // this.addBookAjax();
-    for (let i = 0; i < this.myBooksArray.length; i++) {
-      let currentBook = this.myBooksArray[i];
+    for (let i = 0; i < window.bookshelf.length; i++) {
+      let currentBook = window.bookshelf[i];
       if (currentBook.title === book.title) {
         return false;
       }
     }
 
-    this.myBooksArray.push(book);
+    window.bookshelf.push(book);
     // this.addBookAjax();
     // this.updateLibrary();
     return true;
   }
 
   removeBookByTitle(title) {
-    for (let i = 0; i < this.myBooksArray.length; i++) {
-      if (this.myBooksArray[i].title === title) {
-        // this.deleteBookAjax(this.myBooksArray[i]);
-        this.myBooksArray.splice(i, 1);
+    for (let i = 0; i < window.bookshelf.length; i++) {
+      if (window.bookshelf[i].title === title) {
+        // this.deleteBookAjax(window.bookshelf[i]);
+        window.bookshelf.splice(i, 1);
         // this.updateLibrary();
         return true;
       }
@@ -33,10 +33,10 @@ class Library {
 
   removeBooksByAuthor(authorName) {
     let result = false;
-    for (let i = this.myBooksArray.length - 1; i >= 0; i--) {
-      if (this.myBooksArray[i].author === authorName) {
-        // this.deleteBookAjax(this.myBooksArray[i]);
-        this.myBooksArray.splice(i, 1);
+    for (let i = window.bookshelf.length - 1; i >= 0; i--) {
+      if (window.bookshelf[i].author === authorName) {
+        // this.deleteBookAjax(window.bookshelf[i]);
+        window.bookshelf.splice(i, 1);
         // this.updateLibrary();
       }
     }
@@ -44,10 +44,10 @@ class Library {
   }
 
   getRandomBook() {
-    if (this.myBooksArray.length == 0) {
+    if (window.bookshelf.length == 0) {
       return null;
     } else {
-      return this.myBooksArray[(Math.floor(Math.random() * this.myBooksArray.length))];
+      return window.bookshelf[(Math.floor(Math.random() * window.bookshelf.length))];
     }
     return true;
   }
@@ -55,9 +55,9 @@ class Library {
   getBookByTitle(title) {
     let tempArray = [];
     let pattern = new RegExp(title, "i");
-    for (let i = 0; i < this.myBooksArray.length; i++) {
-      if (pattern.test(this.myBooksArray[i].title)) {
-        tempArray.push(this.myBooksArray[i]);
+    for (let i = 0; i < window.bookshelf.length; i++) {
+      if (pattern.test(window.bookshelf[i].title)) {
+        tempArray.push(window.bookshelf[i]);
       }
     }
     return tempArray;
@@ -66,9 +66,9 @@ class Library {
   getBooksByAuthor(authorName) {
     let tempArray = [];
     let pattern = new RegExp(authorName, "i");
-    for (let i = 0; i < this.myBooksArray.length; i++) {
-      if (pattern.test(this.myBooksArray[i].author)) {
-        tempArray.push(this.myBooksArray[i]);
+    for (let i = 0; i < window.bookshelf.length; i++) {
+      if (pattern.test(window.bookshelf[i].author)) {
+        tempArray.push(window.bookshelf[i]);
       }
     }
     return tempArray;
@@ -90,19 +90,19 @@ class Library {
 
   getAuthors() {
     let tempArray = [];
-    for (let i = 0; i < this.myBooksArray.length; i++) {
-      if (tempArray.indexOf(this.myBooksArray[i].author) === -1) {
-        tempArray.push(this.myBooksArray[i].author);
+    for (let i = 0; i < window.bookshelf.length; i++) {
+      if (tempArray.indexOf(window.bookshelf[i].author) === -1) {
+        tempArray.push(window.bookshelf[i].author);
       }
     }
     return tempArray;
   }
 
   getRandomAuthorName() {
-    if (this.myBooksArray.length == 0) {
+    if (window.bookshelf.length == 0) {
       return [];
     } else {
-      return this.myBooksArray[(Math.floor(Math.random() * this.myBooksArray.length))].author;
+      return window.bookshelf[(Math.floor(Math.random() * window.bookshelf.length))].author;
     }
   }
 

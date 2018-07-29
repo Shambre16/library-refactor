@@ -7,13 +7,12 @@ class ShowAuthorsUI extends Library {
   // ShowAuthorsUI.prototype = Object.create(Library.prototype);
 
   init() {
-    // this.recover();
     this._bindEvents();
     return false;
   };
 
   _bindEvents() {
-    $('button#show-all').on('click', $.proxy(this._handleShowAuthors, this));
+    $('#showAllAuthorsBtn').on('click', $.proxy(this._handleShowAuthors, this));
     return false;
   };
 
@@ -23,7 +22,7 @@ class ShowAuthorsUI extends Library {
       this.$container.modal('show');
       this.$container.find('.modal-body').html(this._createUlOfAuthors(authors));
     } else {
-      alert('Nothing in library!');
+      alert('No books, and therefore no authors, exist in your library yet!');
     }
 
     return false;

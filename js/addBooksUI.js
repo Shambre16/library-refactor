@@ -17,12 +17,23 @@ class AddBooksUI extends Library {
   };
 
   _bindEvents() {
-    $('#add-books-btn').on('click', $.proxy(this._handleModalOpen, this));
+    $('#addBookBtn').on('click', $.proxy(this._handleModalOpen, this));
+    $('#addToQueueBtn').on('click', $.proxy(this._handleQueueing, this));
+    $('#addToBookshelfBtn').on('click', $.proxy(this._handleAddToBookshelf, this));
   };
 
   _handleModalOpen() {
     this.$container.modal('show');
   };
+
+  _handleQueueing(){
+alert("Queue it up!");
+  }
+
+  _handleAddToBookshelf() {
+alert("Yo shit's been added!");
+
+  }
 }
 
 $(function() {

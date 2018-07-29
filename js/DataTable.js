@@ -51,6 +51,6 @@ class DataTable extends Library {
 }
 
 $(function() {
-  window.gDataTable = new DataTable($('#myTable'));
+  window.gDataTable = new DataTable($('#myDynamicTableContent'));
   window.gDataTable.init();
 });

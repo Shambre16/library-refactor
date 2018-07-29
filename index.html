@@ -18,12 +18,12 @@
     <div class="row header-row d-flex justify-content-md-around inline-block-center">
       <div class="col-md-4 header-button-alignment">
         <!-- Remove Book Modal Trigger -->
-        <button class="btn btn-light btn-md float-left" type="button" name="button" data-toggle="modal" data-target="#removeBookModalData">Remove Book</button>
+        <button class="btn btn-light btn-md float-left" type="button" name="button" id="removeBookBtn">Remove Book</button>
       </div>
       <h1 class="col-md-4 text-center">The Library</h1>
       <div class="col-md-4 header-button-alignment">
         <!-- Add Book Modal Trigger-->
-        <button class="btn btn-light btn-md float-right align-middle" type="button" name="button" data-toggle="modal" data-target="#addBookModalData">Add Book</button>
+        <button class="btn btn-light btn-md float-right align-middle" type="button" name="button" id="addBookBtn">Add Book</button>
       </div>
     </div>
     <!-- Jumbotron -->
@@ -38,7 +38,7 @@
         <div class="float-left">
           <button class="form-control btn-sm" type="button" name="button">Show All Books</button>
           <!-- Show Random Book Modal Trigger-->
-          <button class="form-control btn-sm" type="button" name="button" data-toggle="modal" data-target="#showRandomBookModalData">Show Random Book</button>
+          <button class="form-control btn-sm" type="button" name="button" id="showRandomBookBtn">Show Random Book</button>
         </div>
         <!-- Search Input and Button -->
         <div class="float-none">
@@ -48,9 +48,9 @@
         <!-- Right Buttons -->
         <div class="float-right">
           <!-- Show All Authors  Modal Trigger -->
-          <button class="form-control btn-sm" type="button" name="button" data-toggle="modal" data-target="#showAllAuthorsModalData">Show All Authors</button>
+          <button class="form-control btn-sm" type="button" name="button" id="showAllAuthorsBtn">Show All Authors</button>
           <!-- Show Random Author Modal Trigger-->
-          <button class="form-control btn-sm" type="button" name="button" data-toggle="modal" data-target="#showRandomAuthorModalData">Show Random Author</button>
+          <button class="form-control btn-sm" type="button" name="button" id="showRandomAuthorBtn">Show Random Author</button>
         </div>
       </div>
       <!-- Table Row -->
@@ -89,7 +89,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="removeBook">Remove Books</h5>
+              <h5 class="modal-title">Remove Books</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -104,7 +104,7 @@
             </div>
             <div class="modal-footer">
               <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-              <button type="button" class="btn btn-primary">Delete Book(s)</button>
+              <button type="button" class="btn btn-primary" id="deleteBookBtn">Delete Book(s)</button>
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="addBook">Add Book(s)</h5>
+              <h5 class="modal-title">Add Book(s)</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -167,9 +167,9 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-warning" data-dismiss="modal">Add Book to Queue</button>
+              <button type="button" class="btn btn-warning" id="addToQueueBtn">Add Book to Queue</button>
               <p class="text-center"><span>0</span> book(s) added to queue!</p>
-              <button type="button" class="btn btn-success">Save and Add Book(s)</button>
+              <button type="button" class="btn btn-success" id="addToBookshelfBtn">Save and Add Book(s)</button>
             </div>
           </div>
         </div>
@@ -229,9 +229,9 @@
               </button>
             </div>
             <div class="modal-body">
-              <div class="container-fluid">
+              <!-- <div class="container-fluid">
 
-              </div>
+              </div> -->
             </div>
             <!-- <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -240,7 +240,7 @@
           </div>
         </div>
       </div>
-      <!-- Show Random Book Modal -->
+      <!-- Show Random Author Modal -->
       <div class="modal fade" id="showRandomAuthorModalData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -272,11 +272,14 @@
     <script src="js/library.js" charset="utf-8"></script>
     <script src="js/bookObject.js" charset="utf-8"></script>
     <script src="js/bookData.js" charset="utf-8"></script>
-    <!-- <script src="js/library.js" charset="utf-8"></script> -->
-    <!-- <script src="js/bookData.js" charset="utf-8"></script> -->
     <script src="js/util.js" charset="utf-8"></script>
+    <script src="js/removeBooksUI.js" charset="utf-8"></script>
     <script src="js/addBooksUI.js" charset="utf-8"></script>
     <script src="js/DataTable.js" charset="utf-8"></script>
+    <script src="js/showAllBooksUI.js" charset="utf-8"></script>
+    <script src="js/showRandomBookUI.js" charset="utf-8"></script>
+    <script src="js/searchUI.js" charset="utf-8"></script>
     <script src="js/showAuthorsUI.js" charset="utf-8"></script>
+    <script src="js/showRandomAuthorUI.js" charset="utf-8"></script>
   </body>
 </html>
