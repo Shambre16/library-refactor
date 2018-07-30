@@ -124,18 +124,18 @@
                 <form>
                   <div class="form-row">
                     <div class="form-group col-md-12">
-                      <label for="contentEditable">Title *</label>
+                      <label for="title">Title *</label>
                       <!-- Look up contentEditable to see if it belongs here -->
-                      <input type="text" class="form-control" id="" placeholder="">
+                      <input type="text" class="form-control formTitleInput" name="title" placeholder="Type Title Here">
                     </div>
                     <div class="form-group col-md-9">
                       <label for="">Author *</label>
-                      <input type="text" class="form-control" id="" placeholder="">
+                      <input type="text" class="form-control formAuthorInput" name="author" placeholder="Type Author Name Here">
                     </div>
                   <!-- </div> -->
                   <div class="form-group col-md-3">
                     <label for="">Star Rating</label>
-                      <select class="form-control" id="exampleFormControlSelect1">
+                      <select class="form-control starRatingInput" name="rating">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -147,28 +147,28 @@
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="">Pages *</label>
-                      <input class="form-control" id="" type="number" name="" value="">
+                      <input type="number" class="form-control formNumberOfPagesInput" name="numPages" placeholder="Type Number of Pages Here">
                     </div>
                     <div class="form-group col-md-6">
                       <label for="">Publication Date *</label>
-                      <input type="date" class="form-control" id="" placeholder="">
+                      <input type="date" class="form-control formPublishDateInput" name="pubDate" placeholder="Type Publication Date Here">
                     </div>
                     <div class="form-group col-md-12">
                       <label for="">Synopsis</label>
-                      <textarea class="form-control" id="" rows="3"></textarea>
+                      <textarea type="text" class="form-control formSynopsisInput" name="synopsis" rows="3"></textarea>
                     </div>
                   </div>
                   <!-- <button type="submit" class="btn btn-primary">Sign in</button> -->
                   <div class="form-group custom-file">
                     <label class="custom-file-label" for="customFile">Book Cover *</label>
-                    <input type="file" class="custom-file-input" id="">
+                    <input type="file" class="custom-file-input formFileInput" name="fileInput">
                   </div>
                 </form>
               </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-warning" id="addToQueueBtn">Add Book to Queue</button>
-              <p class="text-center"><span>0</span> book(s) added to queue!</p>
+              <p class="text-center"><span class="queue-number">0</span> book(s) added to queue!</p>
               <button type="button" class="btn btn-success" id="addToBookshelfBtn">Save and Add Book(s)</button>
             </div>
           </div>
@@ -207,8 +207,16 @@
               </button>
             </div>
             <div class="modal-body">
-              <div class="container-fluid">
-
+              <div class="modal-body book">
+                <div class="card" id="randomBookModal" style="width: 18rem;">
+                  <img class="card-img-top" src="" alt="Card image cap">
+                  <div class="card-body">
+                    <h5><span class="card-title"></span></h5>
+                    <p><span class="card-text author-paragraph"></span></p>
+                    <p><span class="card-text numberOfPages-paragraph"></span> pages</p>
+                    <p><span class="card-text publishDate-paragraph"></span></p>
+                  </div>
+                </div>
               </div>
             </div>
             <!-- <div class="modal-footer">
@@ -229,9 +237,9 @@
               </button>
             </div>
             <div class="modal-body">
-              <!-- <div class="container-fluid">
+              <div class="container-fluid">
 
-              </div> -->
+              </div>
             </div>
             <!-- <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -278,7 +286,7 @@
     <script src="js/DataTable.js" charset="utf-8"></script>
     <script src="js/showAllBooksUI.js" charset="utf-8"></script>
     <script src="js/showRandomBookUI.js" charset="utf-8"></script>
-    <script src="js/searchUI.js" charset="utf-8"></script>
+    <!-- <script src="js/searchUI.js" charset="utf-8"></script> -->
     <script src="js/showAuthorsUI.js" charset="utf-8"></script>
     <script src="js/showRandomAuthorUI.js" charset="utf-8"></script>
   </body>
