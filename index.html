@@ -8,6 +8,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
   <link rel="stylesheet" href="css/stylesheet.css">
   <title>Hello, world!</title>
 </head>
@@ -18,12 +19,12 @@
     <div class="row header-row d-flex justify-content-md-around inline-block-center">
       <div class="col-md-4 header-button-alignment">
         <!-- Remove Book Modal Trigger -->
-        <button class="btn btn-light btn-md float-left" type="button" name="button" id="removeBookBtn">Remove Book</button>
+        <button class="btn btn-light btn-md float-left" type="button" name="button" id="removeBookBtn"><i class="demo-icon icon-minus"></i>Remove Book</button>
       </div>
       <h1 class="col-md-4 text-center">The Library</h1>
       <div class="col-md-4 header-button-alignment">
         <!-- Add Book Modal Trigger-->
-        <button class="btn btn-light btn-md float-right align-middle" type="button" name="button" id="addBookBtn">Add Book</button>
+        <button class="btn btn-light btn-md float-right align-middle" type="button" name="button" id="addBookBtn"><i class="demo-icon icon-plus"></i>Add Book</button>
       </div>
     </div>
     <!-- Jumbotron -->
@@ -64,12 +65,13 @@
               <th scope="col">Number of Pages</th>
               <th scope="col">Publish Date</th>
               <th scope="col">Rating</th>
+              <th scope="col">Synopsis</th>
               <th scope="col">Edit Book Info</th>
               <th scope="col">Delete Book</th>
             </tr>
           </thead>
           <tbody id="myDynamicTableContent">
-            <tr>
+            <!-- <tr>
               <td><img class="cover-art-size" src="assets/Mists_of_Avalon-1st_ed.jpg" alt="Mists of Avalon first edition cover art"/></td>
               <td>The Mists of Avalon</td>
               <td>Marion Zimmer Bradley</td>
@@ -78,7 +80,7 @@
               <td></td>
               <td></td>
               <td></td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
       </div>
@@ -133,7 +135,7 @@
                       <input type="text" class="form-control formAuthorInput" name="author" placeholder="Type Author Name Here">
                     </div>
                   <!-- </div> -->
-                  <div class="form-group col-md-3">
+                  <!-- <div class="form-group col-md-3">
                     <label for="">Star Rating</label>
                       <select class="form-control starRatingInput" name="rating">
                         <option>1</option>
@@ -143,7 +145,7 @@
                         <option>5</option>
                       </select>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="">Pages *</label>
@@ -161,7 +163,7 @@
                   <!-- <button type="submit" class="btn btn-primary">Sign in</button> -->
                   <div class="form-group custom-file">
                     <label class="custom-file-label" for="customFile">Book Cover *</label>
-                    <input type="file" class="custom-file-input formFileInput" name="fileInput">
+                    <input type="file" class="custom-file-input formFileInput" accept="img/*" name="file">
                   </div>
                 </form>
               </div>

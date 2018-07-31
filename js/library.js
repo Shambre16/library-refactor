@@ -4,6 +4,12 @@ class Library {
 
   }
 
+  _handleEventTrigger(sEvent, oData) {
+      var oData = oData || {},
+      event = new CustomEvent(sEvent, oData);
+      document.dispatchEvent(event);
+  }
+
   addBook(book) {
     // this.addBookAjax();
     for (let i = 0; i < window.bookshelf.length; i++) {
@@ -16,6 +22,7 @@ class Library {
     window.bookshelf.push(book);
     // this.addBookAjax();
     // this.updateLibrary();
+    this._handleEventTrigger('objUpdate');
     return true;
   }
 

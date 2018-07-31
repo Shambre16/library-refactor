@@ -65,6 +65,7 @@ class AddBooksUI extends Library {
   } else {
     alert("Please queue at least one book.")
   }
+  this.$container.modal('hide');
   return false;
 };
 
