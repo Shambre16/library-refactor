@@ -20,11 +20,8 @@ class DataTable extends Library {
   };
 
   _bindCustomListeners() {
-    // if (count > 0) {
-      $(document).on('objUpdate', $.proxy(this._updateTable, this));
-    // }
+    $(document).on('objUpdate', $.proxy(this._updateTable, this));
   };
-
 
   _updateTable(e) {
     var _self = this;
@@ -38,8 +35,6 @@ class DataTable extends Library {
 
   _createRow(book) {
     var tr = document.createElement('tr');
-    var coverImgTag = document.createElement('img');
-    var coverImgVal = document.createAttribute('src', book.cover)
     var deleteInput = document.createElement('input');
     var att = document.createAttribute("type");
     att.value = "checkbox";
@@ -50,12 +45,12 @@ class DataTable extends Library {
       $(td).text(book[key]);
       tr.append(td);
     }
-    // tr.append(document.createElement('td').append(deleteInput));
+    tr.append(document.createElement('td').append(deleteInput));
     return tr;
   };
 }
 
 $(function() {
-  window.gDataTable = new DataTable($('#myTable'));
+  window.gDataTable = new DataTable($('#myDynamicTableContent'));
   window.gDataTable.init();
 });

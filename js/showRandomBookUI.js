@@ -12,7 +12,7 @@ class ShowRandomBookUI extends Library {
 
   _bindEvents() {
     $('#showRandomBookBtn').on('click', $.proxy(this._handleShowRandomBook, this));
-    // return false;
+    return false;
   };
 
   _handleShowRandomBook() {
@@ -25,7 +25,7 @@ class ShowRandomBookUI extends Library {
     //   alert('No books, and therefore no authors, exist in your library yet!');
     // }
     //
-    // return false;
+    return false;
   };
 
   _handleCreateRandoCard() {

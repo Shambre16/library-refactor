@@ -6,7 +6,7 @@ class Library {
 
   _handleEventTrigger(sEvent, oData) {
       var oData = oData || {},
-      event = new CustomEvent(sEvent, oData);
+      event = new CustomEvent(sEvent, {detail: oData});
       document.dispatchEvent(event);
   }
 
